@@ -1,0 +1,14 @@
+Coolcow Web Browser
+===================
+
+Coolcow is a free and open source Web browser, this browser is inspired by 90's times. Supports only HTML without JavaScript and CSS.
+
+To build browser for own use this commands:
+    - Windows:
+        python .\build\winbuild.py or py .\build\winbuild.py
+        python .\toolchain\wintoolchain.py or py .\toolchain\wintoolchain.py
+    - Linux:
+        python .\build\linuxbuild.py
+        python .\toolchain\linuxtoolchain.py
+    - MacOS:
+        Support for MacOS soon...
