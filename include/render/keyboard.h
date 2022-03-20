@@ -6,6 +6,8 @@
 #include <GL/glut.h>
 #include <render/window.h>
 
-void WindowRender::Window::keyboard(unsigned char keycode, int x, int y);
+namespace KeyboardEvent {
+    void keyboard(unsigned char keycode, int x, int y);
+}
 
 #endif

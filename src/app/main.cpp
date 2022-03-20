@@ -6,9 +6,9 @@
 
 int main(int argc, char **argv) {
     
-    WindowRender::Window window;
-    window.init(
-        argc, 
+    // Window* wnd = new Window(
+    new Window(
+        argc,
         argv,
         WIDTH,
         HEIGHT,

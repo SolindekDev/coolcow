@@ -1,7 +1,7 @@
 #include <iostream>
 #include <GL/glut.h>
-#include <render/window.h>
+#include <render/resize_window.h>
 
-void WindowRender::Window::resize_window(int w, int h) {
+void ResizeWindowEvent::resize_window(int w, int h) {
     std::cout << "Window has resized width: " << w << " height: " << h << std::endl; 
 }

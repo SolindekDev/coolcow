@@ -1,7 +1,7 @@
 #include <iostream>
 #include <GL/glut.h>
-#include <render/window.h>
+#include <render/idle.h>
 
-void WindowRender::Window::idle() {
-    // std::cout << "Idle.." << std::endl;
+void IdleEvent::idle() {
+    // WindowRender::Window::display();
 }

@@ -6,7 +6,7 @@
 
 #include <http/response.h>
 
-size_t WebResponse::writefn(void *ptr, size_t size, size_t nmemb, std::string* data) {
+size_t WebResponse::writefn(void* ptr, size_t size, size_t nmemb, std::string* data) {
     data->append((char*) ptr, size * nmemb);
     return size * nmemb;
 }

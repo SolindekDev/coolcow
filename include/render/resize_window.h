@@ -6,6 +6,8 @@
 #include <GL/glut.h>
 #include <render/window.h>
 
-void WindowRender::Window::resize_window(int w, int h);
+namespace ResizeWindowEvent {
+    void resize_window(int w, int h);
+}
 
 #endif
