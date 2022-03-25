@@ -8,6 +8,7 @@
 
 namespace DisplayEvent {
     void display();
+    void init();
 }
 
 #endif

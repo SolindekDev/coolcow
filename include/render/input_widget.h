@@ -1,11 +1,11 @@
-#ifndef BUTTON_WIDGET_H
+#ifndef INPUT_WIDGET_H
 
-#define BUTTON_WIDGET_H
+#define INPUT_WIDGET_H
 
 #include <iostream>
 #include <GL/glut.h>
 
-class ButtonWidget {
+class InputWidget {
 public:
     // Position of button
     int x;
@@ -15,30 +15,28 @@ public:
     int width;
     int height;
 
-    // Value of button
+    // Value of input
     std::string value;
+
+    // Focus
+   	bool focus;
 
     // Color of text
     double r_text;
     double g_text;
     double b_text;
     
-    // Events
-    void* event_click;
-
-    ButtonWidget(
+    InputWidget(
         int x, 
         int y, 
-        std::string value, 
         int width, 
         int height, 
         double r_text, 
         double g_text, 
-        double b_text,
-        void* event_click
+        double b_text
     );
 
     void draw();
 };
 
-#endif
+#endif // INPUT_WIDGET_H

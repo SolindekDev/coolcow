@@ -9,15 +9,15 @@ def compile_files_cpp():
             cpp_files.append(os.path.join(root,file))
 
     for cpp_file in cpp_files:
-        print("g++ -I./include/ -lcurl  -lGL -lGLU -lglut -Wall -Werror -Wno-long-long -O3 -ansi -pedantic -c "+ cpp_file + " -o " + cpp_file.replace('.cpp', '.o'))
-        os.system("g++ -I./include/ -lcurl  -lGL -lGLU -lglut -Wall -Werror -Wno-long-long -O3 -ansi -pedantic -c "+ cpp_file +" -o " + cpp_file.replace('.cpp', '.o')) 
+        print("g++ -I./include/ -lcurl  -lGL -lGLU -lX11 -lglut -Wall -Werror -Wno-long-long -O3 -ansi -pedantic -c -std=c++11 "+ cpp_file + " -o " + cpp_file.replace('.cpp', '.o'))
+        os.system("g++ -I./include/ -lcurl  -lGL -lGLU -lX11 -lglut -Wall -Werror -Wno-long-long -O3 -ansi -pedantic -c -std=c++11 "+ cpp_file +" -o " + cpp_file.replace('.cpp', '.o')) 
         objects.append(cpp_file.replace('.cpp', '.o'))
 
 def link():
     link_cmd = "g++ "
     for obj in objects:
         link_cmd += obj + " "
-    link_cmd += "-o ./builds/app -lcurl  -lGL -lGLU -lglut"
+    link_cmd += "-o ./builds/app -lcurl -lGL -lGLU -lglut -lX11 -lcurses -pthread"
     print(link_cmd)
     os.system(link_cmd)
 
